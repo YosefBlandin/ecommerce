@@ -1,0 +1,44 @@
+@import "./variables";
+@keyframes pulse {
+    0% {
+        -webkit-box-shadow: 0 0 0 0 $primary-beige;
+      }
+      70% {
+          -webkit-box-shadow: 0 0 0 15px rgba(105, 44, 204, 0);
+        
+      }
+      100% {
+          -webkit-box-shadow: 0 0 0 0 rgba(167, 44, 204, 0);
+      }
+}
+@keyframes menu {
+    0% {
+        transform: rotate(0);
+    }
+    50% {
+        box-shadow: 0 0 10px 0 black;
+    }
+    100% {
+        transform: rotate(-30deg);
+    }
+}
+@keyframes menucenter {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(2px);
+    }
+}
+@keyframes menu2 {
+    0% {
+        transform: rotate(0);
+    }
+    50% {
+        box-shadow: 0 0 10px 0 black;
+
+    }
+    100% {
+        transform: rotate(30deg);
+    }
+}

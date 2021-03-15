@@ -1,0 +1,34 @@
+@import "../variables";
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100px;
+  max-height: auto;
+  padding: 40px;
+  margin-top: 5vh;
+  width: 100vw;
+  background-color: $footer-color;
+  color: $primary-beige;
+  ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    width: 100%;
+    a {
+      text-decoration: none;
+      color: $primary-beige;
+    }
+    i {
+      margin: 20px;
+      font-size: 3.5rem;
+      transition: 0.5s;
+      &:hover {
+        transform: scale(1.1);
+        transition: 0.5s;
+      }
+    }
+  }
+}
