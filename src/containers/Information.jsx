@@ -24,7 +24,7 @@ const Information = (props) => {
             "phone": formData.get("phone"),
         }
         addToBuyer(buyer);
-        history.push("/checkout/payment")
+        history.push("/checkout/success")
     }
 
     return (
@@ -36,55 +36,42 @@ const Information = (props) => {
                 <div className="information__form">
                     <form ref={form}>
                         <label htmlFor="name">
-                            Full Name
-              <input type="text" placeholder="Full Name" name="name" id="name" />
+                            Nombre Completo
+              <input type="text" placeholder="Nombre Completo" name="name" id="name" />
                         </label>
                         <label htmlFor="email">
                             Email
               <input type="text" placeholder="Email" name="email" id="email" />
                         </label>
                         <label htmlFor="address">
-                            Address
+                            Direccion
               <input
                                 type="text"
-                                placeholder="Address"
+                                placeholder="Dirección"
                                 name="address"
                                 id="address"
                             />
                         </label>
-                        <label htmlFor="apto">
-                            APT
-              <input type="text" placeholder="APT" name="apartment" id="apto" />
-                        </label>
-                        <label htmlFor="country">
-                            Country
-              <input
-                                type="text"
-                                placeholder="Country"
-                                name="country"
-                                id="country"
-                            />
-                        </label>
                         <label htmlFor="state">
-                            State
-              <input type="text" placeholder="State" name="state" id="state" />
+                            Estado
+              <input type="text" placeholder="Estado" name="state" id="state" />
                         </label>
                         <label htmlFor="city">
-                            City
-              <input type="text" placeholder="City" name="city" id="city" />
+                            Ciudad
+              <input type="text" placeholder="Ciudad" name="city" id="city" />
                         </label>
                         <label htmlFor="cp">
-                            Postal Code
-              <input type="text" placeholder="Postal Code" name="cp" id="cp" />
+                            Código Postal
+              <input type="text" placeholder="Código Postal" name="cp" id="cp" />
                         </label>
                         <label htmlFor="phone">
-                            Phone
-              <input type="text" placeholder="Prone" name="phone" id="phone" />
+                            Telefono
+              <input type="text" placeholder="Telefono" name="phone" id="phone" />
                         </label>
                     </form>
                 </div>
                 <div className="information__buttons">
-                    <div onClick={() => props.history.goBack()} className="information__back">Go Back</div>
+                    <div onClick={() => props.history.goBack()} className="information__back">Volver</div>
                     <div className="information__next">
                         <button onClick={() => handleSubmit()} type="button">Pagar</button>
                     </div>

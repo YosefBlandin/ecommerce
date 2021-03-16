@@ -19,18 +19,20 @@ const Checkout = () => {
         <div className="checkout ">
             <div className="checkout__content">
                 {cart.length > 0 ? <h3>Lista de Pedidos:</h3> : <h3>Sin Pedidos</h3>}
-                {cart.map((element, i) => (
-                    <div key={element.id} className="checkout__content__item card-mb-3">
-                        <img className="card-img" src={element.image} alt="" />
-                        <div className="checkout__content__element card-body">
-                            <h4 className="card-title">{element.title}</h4>
-                            <span className="card-text">Precio: {"$" + element.price}</span>
+                <section>
+                    {cart.map((element, i) => (
+                        <div key={element.id} className="checkout__content__item card-mb-3">
+                            <img className="card-img" src={element.image} alt="" />
+                            <div className="checkout__content__element card-body">
+                                <h4 className="card-title">{element.title}</h4>
+                                <span className="card-text">Precio: {"$" + element.price}</span>
+                            </div>
+                            <button type="button">
+                                <i className="fas fa-trash-alt" title="delete" onClick={() => removeFromCart(element, i)}></i>
+                            </button>
                         </div>
-                        <button type="button">
-                            <i className="fas fa-trash-alt" title="delete" onClick={() => removeFromCart(element, i)}></i>
-                        </button>
-                    </div>
-                ))}
+                    ))}
+                </section>
             </div>
             <div className="checkout__sidebar">
                 {cart.length > 0 ? (

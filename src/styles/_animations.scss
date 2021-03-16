@@ -42,3 +42,11 @@
         transform: rotate(30deg);
     }
 }
+@keyframes entry {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

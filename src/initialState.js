@@ -1,29 +1,92 @@
-import capImg from "./assets/img/cap.png"
-import tShirtImg from "./assets/img/tshirt.png"
-import sweaterImg from "./assets/img/sweater.png";
-
 export default {
     cart: [],
     buyer: [],
-    products: [
+    sweaters: [
         {
             'id': '1',
-            'image': capImg,
-            'title': 'Gorra',
-            'price': 25,
+            'image': "https://i.imgur.com/WR4W2x7.png",
+            'title': "Sueter",
+            'price': 10,
             'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
         },
         {
             'id': '2',
-            'image': tShirtImg,
-            'title': 'Franela',
+            'image': "https://i.imgur.com/WR4W2x7.png",
+            'title': 'Sueter',
             'price': 25,
             'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
         },
         {
             'id': '3',
-            'image': sweaterImg,
+            'image': "https://i.imgur.com/WR4W2x7.png",
+            'title': 'Sueter',
+            'price': 25,
+            'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+        },
+        {
+            'id': '4',
+            'image': "https://i.imgur.com/WR4W2x7.png",
             'title': "Sueter",
+            'price': 10,
+            'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+        },
+    ],
+    caps: [
+        {
+            'id': '5',
+            'image': "https://i.imgur.com/mdkdG8v.png",
+            'title': "Gorra",
+            'price': 10,
+            'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+        },
+        {
+            'id': '6',
+            'image': "https://i.imgur.com/mdkdG8v.png",
+            'title': 'Gorra',
+            'price': 25,
+            'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+        },
+        {
+            'id': '7',
+            'image': "https://i.imgur.com/mdkdG8v.png",
+            'title': 'Gorra',
+            'price': 25,
+            'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+        },
+        {
+            'id': '8',
+            'image': "https://i.imgur.com/mdkdG8v.png",
+            'title': "Gorra",
+            'price': 10,
+            'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+        },
+    ],
+    tShirts: [
+        {
+            'id': '5',
+            'image': "https://i.imgur.com/2AayzyE.png",
+            'title': "Franela",
+            'price': 10,
+            'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+        },
+        {
+            'id': '6',
+            'image': "https://i.imgur.com/2AayzyE.png",
+            'title': 'Franela',
+            'price': 25,
+            'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+        },
+        {
+            'id': '7',
+            'image': "https://i.imgur.com/2AayzyE.png",
+            'title': 'Franela',
+            'price': 25,
+            'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+        },
+        {
+            'id': '8',
+            'image': "https://i.imgur.com/2AayzyE.png",
+            'title': "Franela",
             'price': 10,
             'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
         },
