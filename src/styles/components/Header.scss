@@ -1,5 +1,9 @@
 @import "../_animations";
 @import "../variables";
+a {
+text-decoration: none;
+color:$primary-black;
+}
 .header {
   position: relative;
   width: 100vw;
@@ -85,34 +89,6 @@
     }
   }
 
-  &__alert {
-    color: $primary-blue;
-    font-size: 1.2rem;
-    margin-left: 5px;
-  }
-  &__check {
-    z-index: 50;
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    bottom: 40px;
-    right: 20px;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background-color: $background-color;
-    font-family: sans-serif;
-    animation: 2s pulse;
-    text-align: center;
-    box-shadow: 0 0 3px 0 gray;
-  }
-  & a {
-    text-decoration: none;
-    font-size: 1.6rem;
-    font-weight: bold;
-    color: $primary-blue;
-  }
 }
 
 

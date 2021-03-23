@@ -3,6 +3,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 html {
   font-family: 'Berkshire Swash', cursive;
@@ -71,8 +72,9 @@ body {
 }
 @media screen and (min-width: 1400px) {
   .main {
+    height: 100vh;
     h1 {
-      font-size: 4.5rem;
+      font-size: 4.2rem;
       text-align: center;
       margin-top: 20px;
       grid-column: 1 / 4;

@@ -52,16 +52,17 @@
 }
 @media screen and (min-width: 1400px) {
   .footer {
+    min-height: 40px;
     padding: 0;
     p {
-      font-size: 1.3rem;
-      transform: translateY(-55px);
+      font-size: 1.2rem;
+      transform: translateY(-40px);
     }
     ul {
       transform: translateY(-25px);
       i {
         
-      font-size: 4rem;
+      font-size: 3rem;
       }
     }
   }

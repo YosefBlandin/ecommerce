@@ -20,7 +20,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      height: 440px;
+      height: 380px;
       width: 300px;
       transition: 0.5s;
       color: $primary-color;
@@ -47,28 +47,7 @@
           font-weight: bold;
           font-size: 1.5rem;
         }
-      }
-      button {
-        display: inline-block;
-        width: 220px;
-        height: 50px;
-        font-size: 1rem;
-        font-weight: bold;
-        padding: 12px 42px;
-        cursor: pointer;
-        transition: 0.5s;
-        margin-top: 15px;
-        border: none;
-        border-radius: 10px;
-        color: white;
-        background-color: $primary-blue;
-        &:hover {
-          color: black;
-          background-color: white;
-          transition: 0.5s;
-        }
-      }
-      
+      }  
     }
   }
 }
@@ -79,6 +58,23 @@
       overflow: hidden;
       justify-content: center;
       flex-wrap: wrap;
+    }
+  }
+}
+@media screen and (min-width:1600px) {
+  .categories {
+    h4 {
+      font-size: 2.3rem;
+    }
+    .product__container {
+      .products {
+        height: 350px;
+	width: 278px;
+	&__img {
+	  height: 280px;
+	  width: 280px;
+	}
+      }
     }
   }
 }
