@@ -1,0 +1,41 @@
+label {
+    width: 60vw;
+    input {
+        padding: 8px 10px;
+        width: 100%;
+        background-color:  rgb(46, 46, 46);
+        border: none;
+        color: white;
+        &::placeholder {
+            color: rgb(214, 214, 214);
+            font-weight: 500;
+        }
+        &:hover &::placeholder{
+            display: none;
+        }  
+    }
+}
+
+@media screen and (min-width: 768px) {
+    label {
+        width: 90vw;
+        align-self: center;
+        justify-self: center;
+        grid-row:  2;
+        grid-column: 1 / 4;
+    }
+}
+@media screen and (min-width: 1024px) {
+    label {
+        width: 55vw;
+        align-self: center;
+        justify-self: end;
+        grid-row:  1;
+        grid-column: 2 / 3;
+    }
+}
+@media screen and (min-width: 1300px) {
+    label {
+        width: 60vw;
+    }
+}

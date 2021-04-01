@@ -1,10 +1,12 @@
+import React from 'react'
+
 export default {
     cart: [],
     buyer: [],
     sweaters: [
         {
             'id': '1',
-            'image': "https://i.imgur.com/WR4W2x7.png",
+            'image': "{sweater}",
             'title': "Sueter",
             'price': 10,
             'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',

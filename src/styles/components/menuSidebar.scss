@@ -1,0 +1,115 @@
+@import "../animations";
+.menuSidebar { 
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    right: 100vw;
+    left: 105vw;
+    bottom: 0;
+    width: 70vw;
+    height: 100vh;
+    padding: 5px;
+    box-shadow: 0 0 10px 0 black; 
+    background-color: #ce3d5f;
+    transition: all ease-out 0.4s;
+    &--on {
+        left: 30vw;
+        transition: all ease-out 0.4s;
+    }
+    ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 70vh;
+	    list-style: none;	
+    	li {
+		    width: 100%;
+		    padding: 20px 20px;
+		    text-align: center;
+            color: white;
+            font-weight: bold;
+            transition: 1s;
+            &:hover {
+                background-color: #ef476f;
+                transition: 1s;
+            }
+	    }
+    }
+}
+@media screen and (min-width: 768px) {
+    .menuSidebar { 
+        top: 1%;
+        right: 0;
+        left: calc(100% - 90vw);
+        height: 80px;
+        width: 90vw; 
+        box-shadow: none;
+        background-color: transparent;
+        ul {
+            flex-direction: row;
+            height: 100%;
+            width: 100%;
+            li:nth-child(1) {
+                display: none;
+            }
+            li:nth-child(5) {
+                display: none;
+            }
+            li {
+                font-size: 1.1rem;
+            }
+        }
+    }
+}
+@media screen and (min-width: 1024px) {
+    .menuSidebar { 
+        position: absolute;
+        top: 1%;
+        right: 0;
+        left: calc(100% - 38vw);
+        height: 80px;
+        width: 25vw; 
+        box-shadow: none;
+        background-color: transparent;
+        ul {
+            flex-direction: row;
+            height: 100%;
+            width: 100%;
+            padding: 0 30px;
+            li:nth-child(1) {
+                display: none;
+            }
+            li:nth-child(5) {
+                display: none;
+            }
+            li {
+                font-size: 1.1rem;
+            }
+        }
+    }
+}
+@media screen and (min-width: 1300px) {
+    .menuSidebar { 
+        top: 1%;
+        right: 0;
+        left: calc(100% - 30vw);
+        height: 80px;
+        width: 25vw; 
+        box-shadow: none;
+        background-color: transparent;
+    }
+}
+@media screen and (min-width: 1800px) {
+    .menuSidebar { 
+        top: 1%;
+        right: 0;
+        left: calc(100% - 25vw);
+        height: 80px;
+        width: 25vw; 
+        box-shadow: none;
+        background-color: transparent;
+    }
+}

@@ -2,7 +2,6 @@ import React, { useContext, useRef } from "react";
 import { Link, useHistory } from "react-router-dom";
 import AppContext from "../context/AppContext";
 
-import "../styles/components/Information.scss";
 
 const Information = (props) => {
     const { state, addToBuyer } = useContext(AppContext);

@@ -2,7 +2,6 @@ import React, { useContext, useEffect } from "react"
 import { Link } from "react-router-dom";
 import AppContext from "../context/AppContext";
 
-import "../styles/components/Checkout.scss"
 
 const Checkout = () => {
     const { state, removeFromCart } = useContext(AppContext);
