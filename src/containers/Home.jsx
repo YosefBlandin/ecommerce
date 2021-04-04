@@ -11,15 +11,21 @@ import "../styles/components/home.scss";
 const Home = () => {
     return (
     <>
-        <main className="main">
-            <img  src={sweater} alt="Sueter Machete Store"/>
+        <Link to="/categories" className="main">
+                <img  src={sweater} alt="Sueter Machete Store"/>
+            
+            
             <img  src={tShirt} alt="Camisa Machete Store"/>
+            
+            
             <img  src={cap} alt="Gorra Machete Store"/>
+            
+            
             <img src={heroImg} alt="Imagen de la tienda Machete Store" />
-        </main>
+        </Link>
         <article className="main__section">
                 <h3> Ve nuestros productos por categorias</h3>
-                <Link to="/productscategories">
+                <Link to="/categories">
                 <button>Ver productos</button>
                 </Link>
             </article>

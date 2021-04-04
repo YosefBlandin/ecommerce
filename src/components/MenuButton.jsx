@@ -15,7 +15,7 @@ const MenuButton = () => {
                 <div className="item"></div>
                 <div className="item"></div>
             </div>
-            <MenuSidebar show={show}/>
+            <MenuSidebar show={show} setShow={setShow}/>
             </>
         )
 }

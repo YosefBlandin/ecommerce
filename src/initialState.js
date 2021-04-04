@@ -6,7 +6,7 @@ export default {
     sweaters: [
         {
             'id': '1',
-            'image': "{sweater}",
+            'image': "https://i.imgur.com/WR4W2x7.png",
             'title': "Sueter",
             'price': 10,
             'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',

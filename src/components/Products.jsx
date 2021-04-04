@@ -4,7 +4,7 @@ import AppContext from "../context/AppContext";
 
 import "../styles/components/products.scss";
 
-const Products = ({button, description}) => {
+const Products = ({type}) => {
     const { state, addToCart } = useContext(AppContext);
     const { sweaters, caps, tShirts } = state;
     const handleAddToCart = (product) => () => {
@@ -12,36 +12,64 @@ const Products = ({button, description}) => {
     }
     return (
                 <div className="products">
-                    {sweaters.map(
-                        product => 
-                        (<ProductItem
-                          key={product.id}
-                          product={product}
-                          handleAddToCart={handleAddToCart} 
-                          button={button}
-                          description={description}
-                          />)
-                          )}
-                    {tShirts.map(
-                        product => 
-                        (<ProductItem
-                        key={product.id} 
-                        product={product} 
-                        handleAddToCart={handleAddToCart} 
-                        button={button}
-                        description={description}
-                        />)
-                        )}
-                    {caps.map(
-                        product => 
-                        (<ProductItem
-                        key={product.id} 
-                        product={product} 
-                        handleAddToCart={handleAddToCart} 
-                        button={button}
-                        description={description}
-                        />)
-                        )}
+                    {type === "Todos" ? (
+                        <>
+                        {caps.map(
+                            product => 
+                            (<ProductItem
+                            key={product.id} 
+                            product={product} 
+                            handleAddToCart={handleAddToCart}
+                            />))}
+                            {sweaters.map(
+                                product => 
+                                (<ProductItem
+                                  key={product.id}
+                                  product={product}
+                                  handleAddToCart={handleAddToCart}
+                                  />))}
+                                {
+                                    tShirts.map(
+                                        product => 
+                                        (<ProductItem
+                                        key={product.id} 
+                                        product={product} 
+                                        handleAddToCart={handleAddToCart}
+                                        />)
+                                        )
+                                }                        
+                                  </>
+                    ) : false}
+                    {type === "Sueteres" ? (
+                        sweaters.map(
+                            product => 
+                            (<ProductItem
+                              key={product.id}
+                              product={product}
+                              handleAddToCart={handleAddToCart}
+                              />)
+                              )
+                    ) :false}
+                    {type === "Franelas" ? (
+                        tShirts.map(
+                            product => 
+                            (<ProductItem
+                            key={product.id} 
+                            product={product} 
+                            handleAddToCart={handleAddToCart}
+                            />)
+                            )
+                    ) : false}
+                    {type === "Gorras" ? (
+                        caps.map(
+                            product => 
+                            (<ProductItem
+                            key={product.id} 
+                            product={product} 
+                            handleAddToCart={handleAddToCart}
+                            />)
+                            )
+                    ) : false}
                 </div>
     )
 }
