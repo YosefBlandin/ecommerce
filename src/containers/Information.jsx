@@ -1,6 +1,7 @@
 import React, { useContext, useRef } from "react";
 import { Link, useHistory } from "react-router-dom";
 import AppContext from "../context/AppContext";
+import "../styles/components/information.scss";
 
 
 const Information = (props) => {
@@ -51,18 +52,6 @@ const Information = (props) => {
                                 id="address"
                             />
                         </label>
-                        <label htmlFor="state">
-                            Estado
-              <input type="text" placeholder="Estado" name="state" id="state" />
-                        </label>
-                        <label htmlFor="city">
-                            Ciudad
-              <input type="text" placeholder="Ciudad" name="city" id="city" />
-                        </label>
-                        <label htmlFor="cp">
-                            Código Postal
-              <input type="text" placeholder="Código Postal" name="cp" id="cp" />
-                        </label>
                         <label htmlFor="phone">
                             Telefono
               <input type="text" placeholder="Telefono" name="phone" id="phone" />
@@ -70,7 +59,7 @@ const Information = (props) => {
                     </form>
                 </div>
                 <div className="information__buttons">
-                    <div onClick={() => props.history.goBack()} className="information__back">Volver</div>
+                    <button onClick={() => props.history.goBack()} className="information__back">Volver</button>
                     <div className="information__next">
                         <button onClick={() => handleSubmit()} type="button">Pagar</button>
                     </div>
@@ -80,10 +69,9 @@ const Information = (props) => {
                 <h3 className="sidebar__title">Productos a Comprar:</h3>
                 {cart.map((item) => (
                     <div className="information__item" key={item.title}>
-                        <div className="information__element">
+                            
                             <h4>{item.title}</h4>
                             <span>${item.price}</span>
-                        </div>
                     </div>
                 )
 

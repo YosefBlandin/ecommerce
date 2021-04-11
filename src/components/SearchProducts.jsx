@@ -4,7 +4,7 @@ import "../styles/components/searchProducts.scss";
 
 const SearchProducts = () => {
         return (
-            <label htmlFor="search">
+            <label className="searchProducts" htmlFor="search">
                 <input type="text" placeholder="¿Què estas buscando?"/>
             </label>
         )

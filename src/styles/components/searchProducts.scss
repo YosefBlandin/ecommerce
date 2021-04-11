@@ -1,4 +1,4 @@
-label {
+.searchProducts {
     width: 60vw;
     input {
         padding: 8px 10px;
@@ -17,7 +17,7 @@ label {
 }
 
 @media screen and (min-width: 768px) {
-    label {
+    .searchProducts {
         width: 90vw;
         align-self: center;
         justify-self: center;
@@ -26,7 +26,7 @@ label {
     }
 }
 @media screen and (min-width: 1024px) {
-    label {
+    .searchProducts {
         width: 55vw;
         align-self: center;
         justify-self: end;
@@ -35,7 +35,7 @@ label {
     }
 }
 @media screen and (min-width: 1300px) {
-    label {
+    .searchProducts {
         width: 60vw;
     }
 }
