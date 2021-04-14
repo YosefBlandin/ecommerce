@@ -1,4 +1,5 @@
-@import "../variables";
+@import "../_variables";
+@import "../_animations";
 .checkout {
     display: flex;
     flex-direction: column;
@@ -6,6 +7,7 @@
     margin-top: 130px;
     min-height: 100vh;
     width: 100vw;
+    animation: 1s entryAnimation;
     h3 {
         text-align: center;
     }
@@ -40,6 +42,12 @@
             background-color: $primary-blue;
         }
     }
+}
+.checkout--none {
+    margin-top: 130px;
+    min-height: 100vh;
+    font-size: 1.5rem;
+    text-align: center;
 }
 @media screen and (min-width: 400px) {
     .checkout {

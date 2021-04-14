@@ -6,7 +6,6 @@ import "../styles/components/bottomNavbar.scss";
 
 const BottomNavbar = () => {
     const {stateReduced}  = useContext(AppContext);
-    console.log(stateReduced)
     return (
         <nav className="bottomNavbar">
             <ul>

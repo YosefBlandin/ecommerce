@@ -1,7 +1,13 @@
-@import "../variables";
+@import "../_variables";
+@import "../_animations";
 .information {
-    margin-top: 120px;
     min-height: 100vh;
+    animation: 1s entryAnimation;
+    &__content {
+        padding-top: 120px;
+        padding-bottom: 50px;
+        background-color: rgb(249, 249, 249);
+    }
     &__head {
         margin: 20px 0;
         text-align: center;
@@ -36,6 +42,7 @@
             font-weight: bold;
             border: none;
             border-radius: 30px;
+            cursor: pointer;
             background-color: $primary-blue;
         }
         .information__next {
@@ -47,13 +54,35 @@
             border: none;
             border-radius: 30px;
             background-color: rgb(80, 231, 181);
+            cursor: pointer;
             }
         }
     }
     &__sidebar {
         width: 100vw;
-        margin: 30px 0;
-        padding: 10px;
+        min-height: 50vh;
+        padding: 60px 0;
+        .sidebar__title {
+            margin: 25px 0;
+        }
+        .sidebar__item {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+            .checkout__item {
+                display: flex;
+                flex-direction: column;
+                height: fit-content;
+                width: fit-content;
+                padding: 20px;
+                margin: 10px 5px;
+                text-align: center;
+                h4 {
+                    margin: 10px 0;
+                }
+            }
+        }
         h3 {
             text-align: center;
             font-size: 1.5rem;
@@ -62,7 +91,9 @@
 }
 @media screen and (min-width: 768px) {
 .information {
-    margin-top: 200px;
+    &__content {
+        padding-top: 200px;
+    }
     &__form {
         label {
             width: 500px;
@@ -72,23 +103,10 @@
         width: 500px;
     }
     &__sidebar {
-        margin: 30px 0;
-        padding: 10px;
         h3 {
             margin-bottom: 50px;
             font-size: 1.5rem;
             margin-left: 50px;
-        }
-    }
-
-    .sidebar__item {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        width: 100%;
-        .checkout__item {
-            width: 350px;
-            margin: 10px;
         }
     }
 }
@@ -97,9 +115,7 @@
 .information {
     display: grid;
     grid-template-columns: 45% 55%;
-    align-items: center;
     min-height: 100vh;
-    margin-top: 0;
     &__head {
         h2{
             font-size: 2rem;
@@ -107,24 +123,22 @@
     }
     &__form {
         label {
-            width: 500px;
+            width: 450px;
         }
     }
     &__buttons {
-        width: 500px;
+        width: 450px;
     }
     &__sidebar {
         width: 100%;
-        margin: 30px 0;
-        padding: 0;
+        height: 100%;
+        padding-top: 200px;
         justify-self: center;
         .sidebar__item {
             .checkout__item {
-                width: 300px;
-                height: 150px;
                 img {
-                    width: 150px;
-                    height: 150px;
+                    width: 170px;
+                    height: 170px;
                 }
             }
         }
