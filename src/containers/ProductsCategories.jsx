@@ -16,7 +16,7 @@ const ProductsCategories = () => {
                             <li onClick={() => setContain('Gorras')}>Gorras</li>
                     </ul>
             </section>
-            <Products type={contain}/>
+            <Products category={contain}/>
         </section>
     )
 }

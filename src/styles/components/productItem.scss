@@ -1,9 +1,11 @@
+@import "../animations";
 .productItem {
     position: relative;
     display: grid;
     width: 320px;
     height: auto;
     margin: 30px;
+    animation: 1s entryAnimation;
     img {
         width: 100%;
         padding-top: 50px;

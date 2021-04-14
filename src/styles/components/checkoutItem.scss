@@ -1,0 +1,105 @@
+
+    .checkout__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: fit-content;
+        margin: 20px 0;
+        padding: 0px 25px 10px 10px;
+        border-radius: 10px;
+        background-color: whitesmoke;
+        img {
+            width: 130px;
+            height: 135px;
+        }
+        div {
+            h4 {
+                margin-bottom: 5px;
+                font-size: 1.1rem;
+            }
+            span {
+                font-size: .9rem;
+            }
+        }
+        button {
+            background: none;
+            border: none;
+            color: rgb(201, 25, 25);
+            font-size: 1.2rem;
+        }
+    }
+
+@media screen and (min-width: 400px) {
+    .checkout__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: fit-content;
+        margin: 20px 0;
+        padding: 0px 25px 10px 10px;
+        border-radius: 10px;
+        background-color: whitesmoke;
+        img {
+            width: 140px;
+            height: 145px;
+        }
+        div {
+            h4 {
+                font-size: 1.3rem;
+            }
+            span {
+                font-size: 1rem;
+            }
+        }
+    }
+}
+@media screen and (min-width: 768px) {
+        .checkout__item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 550px;
+            height: fit-content;
+            margin: 20px 0;
+            padding: 0px 25px 10px 10px;
+            border-radius: 10px;
+            background-color: whitesmoke;
+            img {
+                width: 180px;
+                height: 185px;
+            }
+            div {
+                h4 {
+                    font-size: 1.4rem;
+                }
+                span {
+                    font-size: 1.2rem;
+                }
+            }
+            button {
+                font-size: 1.4rem;
+            }
+        }
+}
+@media screen and (min-width: 1280px) {
+        .checkout__item {
+            width: 410px;
+            margin: 20px 10px;
+            img {
+                width: 130px;
+                height: 135px;
+            }
+        }
+}
+@media screen and (min-width: 1800px) {
+        .checkout__item {
+            width: 410px;
+            margin: 20px 10px;
+            img {
+                width: 130px;
+                height: 135px;
+            }
+        }
+}

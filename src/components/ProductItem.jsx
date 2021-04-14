@@ -1,9 +1,15 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import AppContext from '../context/AppContext';
+
 
 import "../styles/components/productItem.scss";
 
-const ProductItem = ({ product, handleAddToCart }) => {
+const ProductItem = ({ product  }) => {
     const { image, title, price } = product;
+    const { dispatch} = useContext(AppContext);
+    const handleAddToCart = (product) => {
+        dispatch({type: "ADD_TO_CART", payload: product})
+    }
     return (
         <article className="productItem">
             <img width="100px" className="productItem__img" src={image} alt={title} />
@@ -14,7 +20,8 @@ const ProductItem = ({ product, handleAddToCart }) => {
                 <span>{price}{" "}$</span>
 
             </div>
-            <button type="button" onClick={handleAddToCart(product)}>Añadir al carrito</button>
+            <button 
+            type="button" onClick={() => handleAddToCart(product)}>Añadir al carrito</button>
 
         </article>
 

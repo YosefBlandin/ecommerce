@@ -1,6 +1,5 @@
-import React,{ useContext } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import AppContext from "../context/AppContext";
 import sweater from "../sweater.png";
 import tShirt from "../tshirt.png"
 import cap from "../cap.png"

@@ -27,6 +27,13 @@
 }
 @media screen and (min-width: 1024px) {
     .bottomNavbar {
-        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: calc(100% - 32vw);
+        height: 90px;
+        width: 30vw; 
+        box-shadow: none;
+        background-color: transparent;
     }
 }

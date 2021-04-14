@@ -1,75 +1,35 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
+import React, {useContext} from "react";
 import ProductItem from "./ProductItem";
 import AppContext from "../context/AppContext";
 
 import "../styles/components/products.scss";
 
-const Products = ({type}) => {
-    const { state, addToCart } = useContext(AppContext);
-    const { sweaters, caps, tShirts } = state;
-    const handleAddToCart = (product) => () => {
-        addToCart(product)
+const Products = ({category}) => {
+    const  {stateReduced}  = useContext(AppContext);
+    const { sweaters, caps, tShirts} = stateReduced;
+
+    const getSweaters = () => {
+        return sweaters.map(e => <ProductItem product={e} key={e.id} />)
     }
+    const getCaps = () => {
+        return caps.map(e => <ProductItem product={e} key={e.id} />)
+    }
+    const getTshirts = () => {
+        return tShirts.map(e => <ProductItem product={e} key={e.id} />)
+    }
+
     return (
                 <div className="products">
-                    {type === "Todos" ? (
-                        <>
-                        {caps.map(
-                            product => 
-                            (<ProductItem
-                            key={product.id} 
-                            product={product} 
-                            handleAddToCart={handleAddToCart}
-                            />))}
-                            {sweaters.map(
-                                product => 
-                                (<ProductItem
-                                  key={product.id}
-                                  product={product}
-                                  handleAddToCart={handleAddToCart}
-                                  />))}
-                                {
-                                    tShirts.map(
-                                        product => 
-                                        (<ProductItem
-                                        key={product.id} 
-                                        product={product} 
-                                        handleAddToCart={handleAddToCart}
-                                        />)
-                                        )
-                                }                        
-                                  </>
+                    {category === 'Todos' ? (
+                       <>
+                        <>{getSweaters()}</>
+                        <>{getCaps()}</>
+                        <>{getTshirts()}</>
+                       </>
                     ) : false}
-                    {type === "Sueteres" ? (
-                        sweaters.map(
-                            product => 
-                            (<ProductItem
-                              key={product.id}
-                              product={product}
-                              handleAddToCart={handleAddToCart}
-                              />)
-                              )
-                    ) :false}
-                    {type === "Franelas" ? (
-                        tShirts.map(
-                            product => 
-                            (<ProductItem
-                            key={product.id} 
-                            product={product} 
-                            handleAddToCart={handleAddToCart}
-                            />)
-                            )
-                    ) : false}
-                    {type === "Gorras" ? (
-                        caps.map(
-                            product => 
-                            (<ProductItem
-                            key={product.id} 
-                            product={product} 
-                            handleAddToCart={handleAddToCart}
-                            />)
-                            )
-                    ) : false}
+                    {category === "Sueteres" ? getSweaters() : false}
+                    {category === "Gorras" ? getCaps() : false}
+                    {category === "Franelas" ? getTshirts() : false}
                 </div>
     )
 }

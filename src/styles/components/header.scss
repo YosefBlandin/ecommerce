@@ -28,7 +28,7 @@
 }
 @media screen and (min-width: 1024px) {
     .header {
-        position: static;
+        position: fixed;
         .header__navbar {
             display: grid;
             grid-template-columns: repeat(6, 1fr);

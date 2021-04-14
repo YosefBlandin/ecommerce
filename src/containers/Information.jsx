@@ -1,31 +1,10 @@
-import React, { useContext, useRef } from "react";
-import { Link, useHistory } from "react-router-dom";
-import AppContext from "../context/AppContext";
+import React from "react";
+import CheckoutItem from "../components/CheckoutItem";
+
 import "../styles/components/information.scss";
 
 
-const Information = (props) => {
-    const { state, addToBuyer } = useContext(AppContext);
-    const form = useRef(null);
-    const { cart } = state;
-    const history = useHistory();
-
-    const handleSubmit = () => {
-        const formData = new FormData(form.current);
-        const buyer = {
-            "name": formData.get("name"),
-            "email": formData.get("email"),
-            "address": formData.get("address"),
-            "apartment": formData.get("apartment"),
-            "city": formData.get("city"),
-            "country": formData.get("country"),
-            "state": formData.get("state"),
-            "cp": formData.get("cp"),
-            "phone": formData.get("phone"),
-        }
-        addToBuyer(buyer);
-        history.push("/checkout/success")
-    }
+const Information = () => {
 
     return (
         <div className="information">
@@ -34,7 +13,7 @@ const Information = (props) => {
                     <h2>Contact information</h2>
                 </div>
                 <div className="information__form">
-                    <form ref={form}>
+                    <form>
                         <label htmlFor="name">
                             Nombre Completo
               <input type="text" placeholder="Nombre Completo" name="name" id="name" />
@@ -59,24 +38,17 @@ const Information = (props) => {
                     </form>
                 </div>
                 <div className="information__buttons">
-                    <button onClick={() => props.history.goBack()} className="information__back">Volver</button>
+                    <button className="information__back">Volver</button>
                     <div className="information__next">
-                        <button onClick={() => handleSubmit()} type="button">Pagar</button>
+                        <button type="button">Pagar</button>
                     </div>
                 </div>
             </div>
             <div className="information__sidebar">
                 <h3 className="sidebar__title">Productos a Comprar:</h3>
-                {cart.map((item) => (
-                    <div className="information__item" key={item.title}>
-                            
-                            <h4>{item.title}</h4>
-                            <span>${item.price}</span>
+                    <div className="sidebar__item">
+                    <CheckoutItem/>
                     </div>
-                )
-
-                )}
-
             </div>
         </div>
     )
