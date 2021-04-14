@@ -1,10 +1,13 @@
-import React, {useState} from 'react';
+import React, {useState } from 'react';
 import Products from "../components/Products";
+import useToTop from "../utils/useToTop";
 
 import "../styles/components/productsCategories.scss";
 
 const ProductsCategories = () => {
     const [contain, setContain] = useState("Todos");
+    useToTop()
+    
     return (
         <section className="productsCategories">
             <h3>{contain}</h3>

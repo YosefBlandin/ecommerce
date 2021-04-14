@@ -3,13 +3,14 @@
     position: fixed;
     top: 0;
     width: 100vw;
-    background-color: #000;
+    background-color: white;
     .header__navbar {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        
-        padding: 10px;
+        padding-top: 6px;
+        padding-left: 10px;
+        padding-right: 20px;
         img {
             width: 51px;
             height: 61px;
@@ -22,7 +23,6 @@
         .header__navbar {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(2, 1fr);
         }
     }
 }

@@ -1,16 +1,17 @@
 import React from "react";
 import CheckoutItem from "../components/CheckoutItem";
+import useToTop from "../utils/useToTop";
 
 import "../styles/components/information.scss";
 
 
 const Information = () => {
-
+    useToTop()
     return (
         <div className="information">
             <div className="information__content">
                 <div className="information__head">
-                    <h2>Contact information</h2>
+                    <h2>Información de Pago</h2>
                 </div>
                 <div className="information__form">
                     <form>

@@ -20,8 +20,9 @@ const ProductItem = ({ product  }) => {
                 <span>{price}{" "}$</span>
 
             </div>
-            <button 
-            type="button" onClick={() => handleAddToCart(product)}>Añadir al carrito</button>
+            <i 
+            className="fas fa-heart"
+            type="button" onClick={() => handleAddToCart(product)}></i>
 
         </article>
 

@@ -5,6 +5,8 @@
     width: 320px;
     height: auto;
     margin: 30px;
+    border-radius: 10%;
+    background-color: whitesmoke;
     animation: 1s entryAnimation;
     img {
         width: 100%;
@@ -24,6 +26,7 @@
             font-size: 1.7rem;
             padding: 10px;
             color: white;
+            border-top-left-radius: 10px;
             background-color: black;
         }
         span {
@@ -34,20 +37,19 @@
             background-color: black;
         }
     }
-    button {
-        width: 200px;
-        height: 50px;
-        border: none;
-        color: white;
-        font-size: 1rem;
+    i {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: #09dfa6;
+        font-size: 2rem;
         font-weight: bold;
         border-radius: 30px;
-        background-color: #06d6a0;
         justify-self: center;
         cursor: pointer;
         transition: 0.5s;
         &:hover {
-            background-color: black;
+            color: red;
             transition: 0.5s;
         }
     }

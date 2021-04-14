@@ -1,5 +1,6 @@
 import React, {useContext} from "react"
 import { Link } from "react-router-dom";
+import useToTop from "../utils/useToTop";
 import CheckoutItem from "../components/CheckoutItem";
 import AppContext from "../context/AppContext";
 import "../styles/components/checkout.scss";
@@ -7,7 +8,7 @@ import "../styles/components/checkout.scss";
 const Checkout = () => {
     const {stateReduced} = useContext(AppContext)
     const totalSum = () => stateReduced.cart.map(e => e.price).reduce((acc,curr) => acc + curr)
-    
+    useToTop();
     return (
         <>
                 {stateReduced.cart.length > 0 ? (

@@ -3,12 +3,14 @@
     input {
         padding: 8px 10px;
         width: 100%;
-        background-color:  rgb(46, 46, 46);
         border: none;
-        color: white;
+        color: gray;
+        border-radius: 30px;
+        border: 2px solid rgb(200, 200, 200);
+        background-color:  transparent;
         &::placeholder {
-            color: rgb(214, 214, 214);
-            font-weight: 500;
+            color: gray;
+            font-weight: bold;
         }
         &:hover &::placeholder{
             display: none;

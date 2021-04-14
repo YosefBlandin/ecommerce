@@ -1,13 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import useToTop from "../utils/useToTop";
+
 import sweater from "../sweater.png";
 import tShirt from "../tshirt.png"
 import cap from "../cap.png"
 import heroImg from "../landscape.png"
-
 import "../styles/components/home.scss";
 
 const Home = () => {
+    useToTop()
     return (
     <>
         <Link to="/categories" className="main">

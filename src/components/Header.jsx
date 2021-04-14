@@ -21,8 +21,8 @@ const Header = () => {
                       
                 </nav>
                 <BottomNavbar />
+        
             </header>
-
         </>
     )
 }
