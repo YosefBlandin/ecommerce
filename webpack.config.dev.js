@@ -1,7 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CompressionPlugin = require('compression-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
@@ -59,16 +58,14 @@ module.exports = {
       template: './index.html',
       filename: './index.html',
     }),
-    new MiniCssExtractPlugin(),
-    new CompressionPlugin({
-        filename: '[path].gz[query]',
-        algorithm: 'gzip',
-        test: /\.(js|css|html|svg)$/,
-        threshold: 8192,
-        minRatio: 0.8
-    })
+    new MiniCssExtractPlugin()
   ],
-  optimization: {
-      minimize: true
-  }
+  devServer: {
+    contentBase: path.join(__dirname, 'public'),
+    hot: true,
+    compress: true,
+    port: 3000,
+    historyApiFallback: true,
+    open: true,
+  },
 };

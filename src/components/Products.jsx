@@ -6,7 +6,7 @@ import "../styles/components/products.scss";
 
 const Products = ({category}) => {
     const  {stateReduced}  = useContext(AppContext);
-    const { sweaters, caps, tShirts} = stateReduced;
+    const { sweaters, caps, tShirts} = stateReduced.products;
 
     const getSweaters = () => {
         return sweaters.map(e => <ProductItem product={e} key={e.id} />)
