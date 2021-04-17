@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import SearchProducts from "./SearchProducts";
 import MenuButton from "./MenuButton";
 import BottomNavbar from "./BottomNavbar"
-import logo from "../logo.png"
 
 import "../styles/components/header.scss";
 
@@ -14,7 +13,7 @@ const Header = () => {
                 <nav className="header__navbar">
                       
                             <Link to="/">
-                                <img className="header__logo" src={logo} alt="Brand logo" />
+                                <img className="header__logo" src="https://i.imgur.com/qujHpQX.png" alt="Brand logo" />
                             </Link>
                         <SearchProducts />
                             <MenuButton />

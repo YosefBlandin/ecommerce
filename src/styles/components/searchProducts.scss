@@ -1,20 +1,37 @@
 .searchProducts {
+    position: relative;
     width: 60vw;
-    input {
-        padding: 8px 10px;
+    transition: 0.5s;
+    &:hover i {
+        transform: rotate(45deg);
+        transition: 1s;
+    } 
+    &:hover &__input {
+        transition: 1s;
+        border: 2px solid black;
+    }
+    i {
+        position: absolute;
+        top: 10px;
+        left: 15px;
+        color: rgb(80, 80, 80);
+        transition: 1s;
+    }
+    &__input {
+        padding: 8px 0;
+        padding-left: 36px;
         width: 100%;
         border: none;
-        color: gray;
+        color: black;
         border-radius: 30px;
-        border: 2px solid rgb(200, 200, 200);
+        outline-style: none;
+        border: 2px solid rgb(206, 206, 206);
         background-color:  transparent;
+        transition: 1s;
         &::placeholder {
-            color: gray;
+            color: rgb(56, 56, 56);
             font-weight: bold;
         }
-        &:hover &::placeholder{
-            display: none;
-        }  
     }
 }
 

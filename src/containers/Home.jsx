@@ -2,9 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import useToTop from "../utils/useToTop";
 
-import sweater from "../sweater.png";
-import tShirt from "../tshirt.png"
-import cap from "../cap.png"
 import heroImg from "../landscape.png"
 import "../styles/components/home.scss";
 
@@ -13,13 +10,13 @@ const Home = () => {
     return (
     <>
         <Link to="/categories" className="main">
-                <img  src={sweater} alt="Sueter Machete Store"/>
+                <img  src="https://i.imgur.com/pDp7bJA.png" alt="Sueter Machete Store"/>
             
             
-            <img  src={tShirt} alt="Camisa Machete Store"/>
+            <img  src="https://i.imgur.com/h4WJAn8.png" alt="Camisa Machete Store"/>
             
             
-            <img  src={cap} alt="Gorra Machete Store"/>
+            <img  src="https://i.imgur.com/BaPSprk.png" alt="Gorra Machete Store"/>
             
             
             <img src={heroImg} alt="Imagen de la tienda Machete Store" />

@@ -15,7 +15,7 @@ const reducer = (state, action) => {
             return  {
                 ...state,
                 cart: [...state.cart, {...action.payload}]
-            }
+            };
             
         case "REMOVE_FROM_CART":
                 if(action.payload.amount !== 1) {
@@ -28,7 +28,14 @@ const reducer = (state, action) => {
                     return {
                     ...state,
                     cart: [...state.cart.filter(e => e.id !== action.payload.id)]
-                }}
+                }};
+
+        case "FETCH_DATA":
+                return {
+                    ...state,
+                    cart: [],
+                    products: [...action.payload]
+                }
             
         default: state
     }
