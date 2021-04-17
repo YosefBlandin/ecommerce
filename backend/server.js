@@ -24,7 +24,7 @@ mongoose.connect(CONNECTION_URL, {
 
 // API Endpoints
 app.get('/', (req,res) => {
-   return  res.status(200).send("Hello World")
+   return  res.status(200).send("Success")
 } );
 
 app.post('/products', (req,res) => {
