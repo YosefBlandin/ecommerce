@@ -1,15 +1,13 @@
-import React from "react";
-import {Link} from "react-router-dom";
-import "../styles/components/notFound.scss";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import '../styles/components/notFound.scss';
 
 const NotFound = () => (
-    <section className="notFound">
-            <h2>404 </h2>
-            <p>Pagina no encontrada...</p>
-            <Link to="/">Volver</Link>
-
-    </section>
+  <section className="notFound">
+    <h2>404 </h2>
+    <p>Pagina no encontrada...</p>
+    <Link to="/">Volver</Link>
+  </section>
 );
 
-
-export default NotFound
+export default NotFound;

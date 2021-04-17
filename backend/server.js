@@ -2,12 +2,14 @@ import express from "express";
 import mongoose from "mongoose";
 import Products from "./dbProducts.js";
 import Cors from "cors";
-
+import dotenv from "dotenv";
+dotenv.config()
 // App Config password 
 const app = express();
 const port = process.env.PORT || 8001;
-const PASSWORD = "QIazkgBr1jWX62mN";
-const CONNECTION_URL = `mongodb+srv://YosefBlandin:${PASSWORD}@cluster0.0veij.mongodb.net/machetedb?retryWrites=true&w=majority`
+const USERNAME = process.env.DB_ADMIN_USERNAME;
+const PASSWORD = process.env.DB_ADMIN_PASSWORD;
+const CONNECTION_URL = `mongodb+srv://${USERNAME}:${PASSWORD}@cluster0.qkz66.mongodb.net/machetestore?retryWrites=true&w=majority`;
 
 // Middlewares
 app.use(express.json());

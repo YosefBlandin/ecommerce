@@ -7,7 +7,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'public'),
     filename: 'bundle.js',
-    publicPath: "/"
+    publicPath: '/',
   },
   resolve: {
     extensions: ['.js', '.jsx'],
@@ -31,23 +31,19 @@ module.exports = {
       },
       {
         test: /\.s[ac]ss$/i,
-        use: [
-          "style-loader",
-          "css-loader",
-          "sass-loader"
-        ],
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
         test: /\.(png|jpg|gif)$/i,
         use: [
           {
-            loader: "url-loader",
+            loader: 'url-loader',
             options: {
               limit: 10000,
-              type: "asset/resource",
-              name: "[name].[contenthash].[ext]",
-              outputPath: "./assets/img",
-            }
+              type: 'asset/resource',
+              name: '[name].[contenthash].[ext]',
+              outputPath: './assets/img',
+            },
           },
         ],
       },
@@ -58,7 +54,7 @@ module.exports = {
       template: './index.html',
       filename: './index.html',
     }),
-    new MiniCssExtractPlugin()
+    new MiniCssExtractPlugin(),
   ],
   devServer: {
     contentBase: path.join(__dirname, 'public'),
