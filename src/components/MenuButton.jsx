@@ -12,9 +12,9 @@ const MenuButton = () => {
         className="menuButton"
         onClick={() => (!show ? setShow(true) : setShow(false))}
       >
-        <div className={!show ? 'item' : 'item item--active'}></div>
-        <div className={!show ? 'item' : 'item item--active'}></div>
-        <div className={!show ? 'item' : 'item item--active'}></div>
+        <div className='item'></div>
+        <div className='item'></div>
+        <div className='item'></div>
       </div>
       <MenuSidebar show={show} setShow={setShow} />
     </>

@@ -10,13 +10,13 @@ const Footer = () => (
       </p>
       <ul>
         <a href="https://twitter.com/machetestoreccs?lang=en">
-          <i className="fab fa-twitter"></i>
+          <i className="fab fa-twitter" />
         </a>
         <a href="https://www.facebook.com/machetestore.clothing/">
-          <i className="fab fa-facebook"></i>
+          <i className="fab fa-facebook" />
         </a>
         <a href="https://www.instagram.com/machetestore/?hl=en">
-          <i className="fab fa-instagram"></i>
+          <i className="fab fa-instagram" />
         </a>
       </ul>
     </footer>

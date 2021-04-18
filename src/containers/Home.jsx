@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import useToTop from '../utils/useToTop';
 
 import heroImg from '../landscape.png';
-import '../styles/components/home.scss';
+import '../styles/containers/home.scss';
 
 const Home = () => {
   useToTop();

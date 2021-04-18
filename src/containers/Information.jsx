@@ -1,8 +1,9 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 import CheckoutItem from '../components/CheckoutItem';
 import useToTop from '../utils/useToTop';
 
-import '../styles/components/information.scss';
+import '../styles/containers/information.scss';
 
 const Information = () => {
   useToTop();
@@ -48,7 +49,7 @@ const Information = () => {
           </form>
         </div>
         <div className="information__buttons">
-          <button className="information__back">Volver</button>
+          <Link to="/checkout"><button className="information__back">Volver</button></Link>
           <div className="information__next">
             <button type="button">Pagar</button>
           </div>

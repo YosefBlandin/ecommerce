@@ -7,7 +7,13 @@
     margin: 30px;
     border-radius: 10%;
     background-color: whitesmoke;
-    animation: 1s entryAnimation;
+    box-shadow: 0 0 10px 0 rgb(205, 205, 205);
+    animation: 0.5s entryAnimation;
+    transition: 0.5s;
+    &:hover {
+        transition: 0.5s;
+        box-shadow: 0 0 20px 0 rgb(205, 205, 205);
+    }
     img {
         width: 100%;
         padding-top: 50px;
@@ -26,6 +32,7 @@
             font-size: 1.7rem;
             padding: 10px;
             color: white;
+            text-shadow: 2px 2px rgb(161, 161, 161);
             border-top-left-radius: 10px;
             background-color: black;
         }
@@ -34,6 +41,7 @@
             padding: 10px;
             color: #0ffdbe;
             font-weight: bold;
+            text-shadow: 2px 2px green;
             background-color: black;
         }
     }
@@ -47,10 +55,8 @@
         border-radius: 30px;
         justify-self: center;
         cursor: pointer;
-        transition: 0.5s;
         &:hover {
-            color: red;
-            transition: 0.5s;
+            animation: 1s heart ;
         }
     }
 }

@@ -3,10 +3,9 @@ import AppContext from '../context/AppContext';
 import Skeleton from 'react-loading-skeleton';
 
 import '../styles/components/productItem.scss';
-import Loading from './Loading';
 
 const ProductItem = ({ product, loading }) => {
-  const { image, title, price } = product;
+  const {image, title, price} = product;
   const { dispatch } = useContext(AppContext);
   const handleAddToCart = (product) => {
     dispatch({ type: 'ADD_TO_CART', payload: product });
