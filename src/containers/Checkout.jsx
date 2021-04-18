@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import useToTop from '../utils/useToTop';
 import CheckoutItem from '../components/CheckoutItem';
 import AppContext from '../context/AppContext';
-import '../styles/components/checkout.scss';
+import '../styles/containers/checkout.scss';
 
 const Checkout = () => {
   const { stateReduced } = useContext(AppContext);

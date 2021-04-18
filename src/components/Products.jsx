@@ -1,19 +1,14 @@
 import React, { useContext, useEffect, useState } from 'react';
+import fetchData from "../utils/fetchData.js";
 import ProductItem from './ProductItem';
 import AppContext from '../context/AppContext';
-import axios from '../axios';
 import '../styles/components/products.scss';
 
 const Products = ({ category }) => {
   const { stateReduced, dispatch } = useContext(AppContext);
   const [loading, setLoading] = useState(true);
   let { products } = stateReduced;
-  const fetchData = () =>
-    new Promise((resolve, reject) => {
-      const response = axios.get('/products');
-      resolve(response);
-      reject('Error');
-    });
+  
   const getSweaters = () =>
     products.map(
       (e) =>
@@ -43,6 +38,7 @@ const Products = ({ category }) => {
         return dispatch({ type: 'FETCH_DATA', payload: data });
       })
       .catch((err) => console.log(err));
+      return () => setLoading(false)
   }, []);
 
   return (

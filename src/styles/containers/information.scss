@@ -2,7 +2,6 @@
 @import "../_animations";
 .information {
     min-height: 100vh;
-    animation: 1s entryAnimation;
     &__content {
         padding-top: 120px;
         padding-bottom: 50px;
@@ -62,6 +61,7 @@
         width: 100vw;
         min-height: 50vh;
         padding: 60px 0;
+        background-color: white;
         .sidebar__title {
             margin: 25px 0;
         }
