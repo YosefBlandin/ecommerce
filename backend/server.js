@@ -7,7 +7,7 @@ const app = express();
 const port = process.env.PORT || 8001;
 const USERNAME = "YosefBlandin";
 const PASSWORD = 27622771;
-const CONNECTION_URL = `mongodb+srv://${USERNAME}:${PASSWORD}@cluster0.0veij.mongodb.net/machetedb?retryWrites=true&w=majority`
+const CONNECTION_URL = `mongodb+srv://${USERNAME}:${PASSWORD}@cluster0.0veij.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`
 
 // Middlewares
 app.use(express.json());
@@ -21,11 +21,11 @@ mongoose.connect(CONNECTION_URL, {
 })
 
 // API Endpoints
-app.get('/', (req,res) => {
-   return  res.status(200).send("Success")
-} );
+app.get('/', (req, res) => {
+    return res.status(200).send("Success")
+});
 
-app.post('/products', (req,res) => {
+app.post('/products', (req, res) => {
     const dbProduct = req.body;
 
     Products.create(dbProduct, (err, data) => {
@@ -37,7 +37,7 @@ app.post('/products', (req,res) => {
     })
 });
 
-app.get("/products", (req,res) => {
+app.get("/products", (req, res) => {
     Products.find((err, data) => {
         if (err) {
             res.status(500).send(err);
