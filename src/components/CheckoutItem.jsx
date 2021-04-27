@@ -1,11 +1,11 @@
-import React, { useContext, useState, useEffect } from 'react';
+import React, { useContext } from 'react';
 import AppContext from '../context/AppContext';
 
 import '../styles/components/checkoutItem.scss';
 
 const CheckoutItem = ({ isButton }) => {
   const { stateReduced, dispatch } = useContext(AppContext);
-  const { cart } = stateReduced;
+  const {cart} = stateReduced;
   const handleRemoveFromCart = (element) => {
     dispatch({ type: 'REMOVE_FROM_CART', payload: element });
   };

@@ -5,7 +5,7 @@
     }
     50% {
         opacity: 1;
-        text-shadow: 10px 0px rgba($color: #fff, $alpha: 1);
+        text-shadow: 10px 0px rgba($color: rgb(241, 230, 178), $alpha: 1);
     }
     100% {
         opacity: .5;
@@ -14,7 +14,7 @@
 }
 @keyframes paragraph {
     from {
-        letter-spacing: 3rem;
+        letter-spacing: 2rem;
     }
     to {
         letter-spacing: inherit;
@@ -25,7 +25,7 @@
     grid-template-rows: repeat(5, 1fr);
     min-height: 100vh;
     margin: 0px 0;
-    background-color: black;
+    background-color: white;
     h2 {
         grid-row: 2;
         justify-self: center;
@@ -38,8 +38,8 @@
         font-size: 1.5rem;
         font-weight: bold;
         justify-self: center;
-        color: white;
-        animation: 3s paragraph forwards;
+        color: black;
+        animation: 2s paragraph forwards;
     }
     a {
         display: flex;
@@ -49,12 +49,16 @@
         height: 50px;
         width: 200px;
         grid-row: 4;
-        color: white;
+        color: black;
         font-size: 1rem;
         font-weight: bold;
         text-decoration: none;
-        background-color: none;
-        border: 1px solid white;
-        animation: 2s buttonWave forwards;
+        border: 1px solid rgb(192, 192, 192);
+        transition: 0.5s;
+    }
+    a:hover {
+        color: white;
+        background-color: black;
+        transition: 0.5s;
     }
 }

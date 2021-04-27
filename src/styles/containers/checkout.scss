@@ -3,10 +3,10 @@
 .checkout {
     display: flex;
     flex-direction: column;
-    margin-top: 130px;
+    padding-top: 120px;
     min-height: 100vh;
     width: 100vw;
-    animation: 1s entryAnimation;
+    background-color: white;
     h3 {
         text-align: center;
     }
@@ -49,16 +49,16 @@
     }
 }
 .checkout--none {
-    margin-top: 130px;
+    padding-top: 120px;
     min-height: 100vh;
     font-size: 1.5rem;
     text-align: center;
+    background-color: white;
 }
 @media screen and (min-width: 400px) {
     .checkout {
         display: flex;
         flex-direction: column;
-        margin-top: 130px;
         width: 100vw;
         .checkout__content {
             width: 100vw;
@@ -75,7 +75,6 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        margin-top: 200px;
         width: 100vw;
         .checkout__content {
             display: flex;
@@ -111,10 +110,13 @@
     .checkout {
         display: grid;
         grid-template-columns: 60% 40%;
-        margin-top: 100px;
         width: 100vw;
-        h3 {
-            font-size: 1.5rem;
+        grid-template-columns: 70% 30%;
+        grid-template-rows: 150px repeat(3, 1fr);
+        & > h3 {
+            font-size: 1.8rem;
+            align-self: start;
+            margin: 30px 0;
         }
         .checkout__content {
             display: flex;
@@ -122,8 +124,10 @@
             flex-wrap: wrap;
             grid-column: 1;
             align-items: center;
+            justify-content: center;
             width: 100%;
-            padding: 40px;
+            height: fit-content;
+            padding: 10px;
             text-align: center;
             h3 {
                 font-size: 1.6rem;
@@ -133,29 +137,7 @@
             justify-self: center;
         }
         .checkout__sidebar {
-            align-self: center;
             grid-row: 1;
-            grid-column: 2;
-        }
-    }   
-}
-@media screen and (min-width: 1280px) {
-    .checkout {
-        grid-template-columns: 70% 30%;
-        grid-template-rows: 150px repeat(3, 1fr);
-        & > h3 {
-            font-size: 1.8rem;
-            align-self: start;
-            margin: 30px 0;
-        }
-        .checkout__content {
-            justify-content: center;
-            height: fit-content;
-            padding: 10px;
-            grid-column: 1;
-            text-align: center;
-        }
-        .checkout__sidebar {
             grid-column: 2;
             height: 100%;
             justify-content: space-evenly;

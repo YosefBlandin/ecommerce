@@ -12,8 +12,8 @@
     width: 70vw;
     height: 100vh;
     padding: 5px;
-    box-shadow: 0 0 10px 0 black; 
-    background-color: rgba($color: #000000, $alpha: .7);
+    box-shadow: 0 0 10px 0 rgb(7, 7, 7); 
+    background-color: rgb(255,255,255);
     transition: all ease-out 0.4s;
     &--on {
         left: 30vw;
@@ -31,7 +31,8 @@
                 width: 100%;
                 padding: 20px 20px;
                 text-align: center;
-                color: white;
+                color: black;
+                text-shadow: 2px 2px rgb(211, 211, 211);
                 font-weight: bold;
         }
 	    }

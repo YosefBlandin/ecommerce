@@ -30,11 +30,11 @@
 @media screen and (min-width: 1024px) {
     .bottomNavbar {
         position: fixed;
-        top: 0;
+        top: -6px;
         right: 0;
         left: calc(100% - 30vw);
-        height: 90px;
-        width: 28vw; 
+        height: 80px;
+        width: 25vw; 
         color: black;
         box-shadow: none;
         background-color: transparent;

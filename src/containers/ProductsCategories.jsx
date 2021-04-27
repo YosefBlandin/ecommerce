@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Products from '../components/Products';
 import useToTop from '../utils/useToTop';
 
-import '../styles/components/productsCategories.scss';
+import '../styles/containers/productsCategories.scss';
 
 const ProductsCategories = () => {
   const [contain, setContain] = useState('Todos');

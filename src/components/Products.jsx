@@ -1,39 +1,34 @@
 import React, { useContext, useEffect, useState } from 'react';
+import fetchData from '../utils/fetchData';
 import ProductItem from './ProductItem';
 import AppContext from '../context/AppContext';
-import axios from '../axios';
 import '../styles/components/products.scss';
 
 const Products = ({ category }) => {
   const { stateReduced, dispatch } = useContext(AppContext);
   const [loading, setLoading] = useState(true);
-  let { products } = stateReduced;
-  const fetchData = () =>
-    new Promise((resolve, reject) => {
-      const response = axios.get('/products');
-      resolve(response);
-      reject('Error');
-    });
+  const { products } = stateReduced;
+
   const getSweaters = () =>
     products.map(
       (e) =>
         e.type === 'sueteres' && (
           <ProductItem key={e.id} product={e} loading={loading} />
-        )
+        ),
     );
   const getCaps = () =>
     products.map(
       (e) =>
         e.type === 'gorras' && (
           <ProductItem key={e.id} product={e} loading={loading} />
-        )
+        ),
     );
   const getShirts = () =>
     products.map(
       (e) =>
         e.type === 'franelas' && (
           <ProductItem key={e.id} product={e} loading={loading} />
-        )
+        ),
     );
 
   useEffect(() => {
@@ -43,6 +38,7 @@ const Products = ({ category }) => {
         return dispatch({ type: 'FETCH_DATA', payload: data });
       })
       .catch((err) => console.log(err));
+    return () => setLoading(false);
   }, []);
 
   return (
@@ -54,8 +50,8 @@ const Products = ({ category }) => {
           <>{getShirts()}</>
         </>
       ) : (
-        false
-      )}
+          false
+        )}
       {category === 'Sueteres' ? getSweaters() : false}
       {category === 'Gorras' ? getCaps() : false}
       {category === 'Franelas' ? getShirts() : false}
