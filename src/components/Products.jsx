@@ -50,8 +50,8 @@ const Products = ({ category }) => {
           <>{getShirts()}</>
         </>
       ) : (
-        false
-      )}
+          false
+        )}
       {category === 'Sueteres' ? getSweaters() : false}
       {category === 'Gorras' ? getCaps() : false}
       {category === 'Franelas' ? getShirts() : false}
