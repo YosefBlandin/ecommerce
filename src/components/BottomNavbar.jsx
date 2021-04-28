@@ -13,7 +13,7 @@ const BottomNavbar = () => {
     <nav className="bottomNavbar">
       <ul>
           <li>
-            <NavLink to="/home" className="fas fa-home"></NavLink>
+            <NavLink to="/categories" className="fas fa-tshirt"></NavLink>
           </li>
           <li>
             <NavLink to="/checkout" className="fas fa-store">
