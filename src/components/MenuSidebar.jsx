@@ -7,7 +7,7 @@ const MenuSidebar = ({ show, setShow }) => {
   return (
     <section className={!show ? 'menuSidebar' : 'menuSidebar menuSidebar--on'}>
       <ul>
-        <Link to="/" onClick={() => setShow(false)}>
+        <Link to="/home" onClick={() => setShow(false)}>
           <li>Inicio</li>
         </Link>
         <Link to="/categories" onClick={() => setShow(false)}>

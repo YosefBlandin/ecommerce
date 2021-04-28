@@ -32,7 +32,7 @@
             font-size: 1.7rem;
             padding: 10px;
             color: white;
-            text-shadow: 2px 2px rgb(161, 161, 161);
+            text-shadow: 2px 2px rgb(100, 100, 100);
             border-top-left-radius: 10px;
             background-color: black;
         }
@@ -41,7 +41,7 @@
             padding: 10px;
             color: #0ffdbe;
             font-weight: bold;
-            text-shadow: 2px 2px green;
+            text-shadow: 2px 2px rgb(100,100,100);
             background-color: black;
         }
     }
@@ -55,8 +55,11 @@
         border-radius: 30px;
         justify-self: center;
         cursor: pointer;
-        &:hover {
-            animation: 1s heart ;
+        &:hover { 
+            color: red;
         }
+    }
+    .heartAnimation {
+      animation: 0.5s heart
     }
 }

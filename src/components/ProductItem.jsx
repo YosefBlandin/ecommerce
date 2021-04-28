@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import AppContext from '../context/AppContext';
 import Skeleton from 'react-loading-skeleton';
 
@@ -7,6 +7,7 @@ import '../styles/components/productItem.scss';
 const ProductItem = ({ product, loading }) => {
   const {image, title, price} = product;
   const { dispatch } = useContext(AppContext);
+  const [ animation, setAnimation ] = useState(false);
   const handleAddToCart = (product) => {
     dispatch({ type: 'ADD_TO_CART', payload: product });
   };
@@ -27,9 +28,12 @@ const ProductItem = ({ product, loading }) => {
             <span>{price} $</span>
           </div>
           <i
-            className="fas fa-heart"
+            className={!animation ? "fas fa-heart": "fas fa-heart heartAnimation"}
             type="button"
-            onClick={() => handleAddToCart(product)}
+            onClick={() => { 
+            handleAddToCart(product);
+            setAnimation(!animation);
+            }}
           ></i>
         </>
       )}

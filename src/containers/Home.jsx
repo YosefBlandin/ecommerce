@@ -16,14 +16,8 @@ const Home = () => {
 
         <img src="https://i.imgur.com/BaPSprk.png" alt="Gorra Machete Store" />
 
-        <img src={heroImg} alt="Imagen de la tienda Machete Store" />
-      </Link>
-      <article className="main__section">
-        <h3> Ve nuestros productos por categorias</h3>
-        <Link to="/categories">
-          <button>Ver productos</button>
-        </Link>
-      </article>
+       </Link>
+
     </>
   );
 };

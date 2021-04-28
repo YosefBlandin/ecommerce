@@ -5,19 +5,11 @@
     }
     50% {
         opacity: 1;
-        text-shadow: 10px 0px rgba($color: rgb(241, 230, 178), $alpha: 1);
+        text-shadow: 10px 0px rgba($color: cyan, $alpha: 1);
     }
     100% {
         opacity: .5;
         text-shadow: 0px 0px rgba($color: gray, $alpha: 0.1);
-    }
-}
-@keyframes paragraph {
-    from {
-        letter-spacing: 2rem;
-    }
-    to {
-        letter-spacing: inherit;
     }
 }
 .notFound {

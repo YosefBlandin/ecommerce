@@ -11,7 +11,7 @@ const Header = () => {
     <>
       <header className="header">
         <nav className="header__navbar">
-          <Link to="/">
+          <Link to="/home">
             <img
               className="header__logo"
               src="https://i.imgur.com/qujHpQX.png"
