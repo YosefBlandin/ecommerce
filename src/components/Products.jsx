@@ -34,7 +34,7 @@ const Products = ({ category }) => {
   useEffect(() => {
     fetchData()
       .then(({ data }) => {
-        setTimeout(() => setLoading(false), 1000);
+        setTimeout(() => setLoading(false), 500);
         return dispatch({ type: 'FETCH_DATA', payload: data });
       })
       .catch((err) => console.log(err));
